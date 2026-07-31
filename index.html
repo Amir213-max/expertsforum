@@ -21,6 +21,7 @@
   <div class="top-bar">
     <div class="container top-bar-content">
       <div class="top-info">
+        <a href="tel:+966920023919" class="top-info-item"><i class="fa-solid fa-phone text-gold"></i> <span dir="ltr" style="unicode-bidi: isolate; display: inline-block;">+966 9200 23919</span></a>
         <a href="mailto:INFO@EXPERTS4M.COM" class="top-info-item">
           <i class="fa-solid fa-envelope text-gold"></i>
           <span>INFO@EXPERTS4M.COM</span>
@@ -191,6 +192,10 @@
         </li>
 
         <li class="nav-item">
+          <a href="blog/index.html" class="nav-link">المدونة</a>
+        </li>
+
+        <li class="nav-item">
           <a href="#contact" class="nav-link">اتصل بنا</a>
         </li>
       </ul>
@@ -343,7 +348,72 @@
 
       </div>
     </div>
+  <!-- Strategic Video Showcase Section -->
+  <section class="video-section" id="video-showcase">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">العرض الاستراتيجي المرئي</span>
+        <h2 class="section-title">نبض الاستثمار ورؤية المستقبل 2030</h2>
+        <p class="section-subtitle">فيديو تعريفي يستعرض مقومات ومحاور ملتقى الخبراء في تمكين المشاريع وتطوير الأعمال</p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="video-container">
+        <div class="video-wrapper">
+          <img src="images/video_poster.jpg" alt="فيديو ملتقى الخبراء الاستراتيجي" class="video-poster">
+          <div class="video-overlay">
+            <button class="play-btn-pulse" id="openVideoModal" aria-label="تشغيل الفيديو الاستراتيجي">
+              <i class="fa-solid fa-play"></i>
+            </button>
+            <div class="video-title-overlay">شاهد: منظومة تمكين الاستثمارات الوطنية والحلول المتكاملة</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expressive Gallery Cards -->
+      <div class="media-grid">
+        <div class="media-card">
+          <div class="media-img-wrapper">
+            <img src="images/blog_vision2030.jpg" alt="المشاريع الوطنية الاستراتيجية" loading="lazy">
+          </div>
+          <div class="media-card-body">
+            <h3 class="media-card-title">تمكين المشاريع الوطنية 2030</h3>
+            <p class="media-card-desc">استشارات وتوجيه استثماري متكامل يتوافق مع الرؤية الوطنية لخلق قيمة مضافة مستدامة.</p>
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-img-wrapper">
+            <img src="images/blog_digital.jpg" alt="التحول الرقمي والحلول الذكية" loading="lazy">
+          </div>
+          <div class="media-card-body">
+            <h3 class="media-card-title">الذكاء المؤسسي والتحول الرقمي</h3>
+            <p class="media-card-desc">حلول تقنية متقدمة وتمكين البيانات لاتخاذ قرارات استراتيجية دقيقة ومبنية على أبحاث موثوقة.</p>
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-img-wrapper">
+            <img src="images/future-city.jpg" alt="الاستدامة والابتكار" loading="lazy">
+          </div>
+          <div class="media-card-body">
+            <h3 class="media-card-title">النمو والاستدامة المستقبلية</h3>
+            <p class="media-card-desc">منهجيات شاملة لتطوير وإعادة هيكلة المشاريع لضمان الجاهزية والاستمرارية والتنافسية.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <!-- Video Modal -->
+  <div class="video-modal" id="videoModal">
+    <div class="video-modal-content">
+      <button class="close-video-modal" id="closeVideoModal">&times;</button>
+      <div style="position: relative; padding-top: 56.25%;">
+        <iframe id="videoIframe" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=0" style="position: absolute; top:0; left:0; width:100%; height:100%; border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
 
   <!-- Sectoral Services Section -->
   <section class="services-section" id="services">
@@ -597,6 +667,16 @@
           </div>
 
           <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <div class="contact-text-label">الرقم الموحد والهاتف</div>
+              <div class="contact-text-val">
+                <a href="tel:+966920023919" style="color: var(--gold-primary); font-weight: 700; text-decoration: none;"><span dir="ltr" style="unicode-bidi: isolate; display: inline-block;">+966 9200 23919</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item">
             <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
             <div>
               <div class="contact-text-label">البريد الإلكتروني المباشر</div>
@@ -695,8 +775,9 @@
         <div>
           <h4 class="footer-title">التواصل</h4>
           <ul class="footer-links">
+            <li><a href="tel:+966920023919" class="footer-link"><i class="fa-solid fa-phone text-gold"></i> <span dir="ltr" style="unicode-bidi: isolate; display: inline-block;">+966 9200 23919</span></a></li>
             <li><a href="mailto:INFO@EXPERTS4M.COM" class="footer-link"><i class="fa-solid fa-envelope text-gold"></i> INFO@EXPERTS4M.COM</a></li>
-            <li style="color: var(--text-secondary); margin-top: 0.5rem;"><i class="fa-solid fa-location-dot text-gold"></i> المملكة العربية السعودية</li>
+            <li style="color: var(--text-secondary); margin-top: 0.5rem;"><i class="fa-solid fa-location-dot text-gold"></i> المملكة العربية السعودية - الرياض</li>
           </ul>
         </div>
       </div>

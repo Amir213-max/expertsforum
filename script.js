@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (dropdown && link) {
       link.addEventListener('click', (e) => {
-        if (window.innerWidth <= 992) {
+        if (window.innerWidth <= 1200) {
           // If the dropdown isn't open yet, prevent redirection and show it
           if (dropdown.style.display !== 'block') {
             e.preventDefault();
@@ -116,6 +116,42 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       alert('شكراً لتواصلكم مع شركة ملتقى الخبراء المحدودة. تم استلام رسالتكم بنجاح وسيقوم فريقنا بالتواصل معكم في أقرب وقت.');
       contactForm.reset();
+    });
+  }
+
+  // Strategic Video Modal Handling
+  const openVideoBtn = document.getElementById('openVideoModal');
+  const closeVideoBtn = document.getElementById('closeVideoModal');
+  const videoModal = document.getElementById('videoModal');
+  const videoIframe = document.getElementById('videoIframe');
+
+  if (openVideoBtn && videoModal) {
+    openVideoBtn.addEventListener('click', () => {
+      videoModal.classList.add('active');
+      if (videoIframe) {
+        // Embed promotional presentation video
+        videoIframe.src = "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1";
+      }
+    });
+  }
+
+  if (closeVideoBtn && videoModal) {
+    closeVideoBtn.addEventListener('click', () => {
+      videoModal.classList.remove('active');
+      if (videoIframe) {
+        videoIframe.src = "";
+      }
+    });
+  }
+
+  if (videoModal) {
+    videoModal.addEventListener('click', (e) => {
+      if (e.target === videoModal) {
+        videoModal.classList.remove('active');
+        if (videoIframe) {
+          videoIframe.src = "";
+        }
+      }
     });
   }
 });
