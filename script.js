@@ -129,8 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
     openVideoBtn.addEventListener('click', () => {
       videoModal.classList.add('active');
       if (videoIframe) {
-        // Embed promotional presentation video
-        videoIframe.src = "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1";
+        // Video duration is 30s; end=25 cuts off the last 5 seconds
+        videoIframe.src = "https://www.youtube-nocookie.com/embed/Ug8_PrKr5Vs?autoplay=1&end=25&rel=0";
       }
     });
   }
