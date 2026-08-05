@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" fill="none" aria-label="Experts Forum Logo">
+  <!-- 
+    Official EX Monogram — 
+    1. Perfectly flush left outer edge at X=20.5 from Y=14 to Y=106 with zero step or notch
+    2. Zero line tips sticking out below Y=106
+    3. Solid Top Bar fused to X top-left descending stroke
+    4. Solid Middle & Bottom Bars, Hollow Ascending X Diagonal
+  -->
+
+  <!-- Solid Bold White Components -->
+  <g fill="#FFFFFF">
+    <!-- Top Bar of E Fused to Top-Left of X Descending Stroke (Left edge aligned at X=20.5) -->
+    <path d="M 20.5 14 H 104 L 174 106 H 160 L 90 28 H 20.5 Z" />
+
+    <!-- E Middle Bar (Solid Bold) -->
+    <path d="M 36 54 H 74 V 66 H 36 Z" />
+
+    <!-- E Bottom Bar (Solid Bold, Left edge aligned at X=20.5) -->
+    <path d="M 20.5 92 H 88 V 106 H 20.5 Z" />
+  </g>
+
+  <!-- Hollow Double-Line Outline Components -->
+  <g stroke="#FFFFFF" stroke-width="3" stroke-linecap="butt" stroke-linejoin="miter">
+    <!-- E Left Vertical Stem (Outer edge at X=20.5, bounded between Y=28 & Y=92 with zero bottom spill) -->
+    <path d="M 22 28 V 92" />
+    <path d="M 36 28 V 92" />
+
+    <!-- X Ascending Diagonal (Hollow Double Line) -->
+    <path d="M 92 106 L 162 14" />
+    <path d="M 106 106 L 176 14" />
+
+    <!-- End Caps for X Ascending Diagonal -->
+    <path d="M 162 14 H 176" />
+    <path d="M 92 106 H 106" />
+  </g>
+</svg>
