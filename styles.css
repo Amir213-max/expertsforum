@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    Experts Forum Co. Ltd. — Design System & Premium Styling
    ========================================================================== */
 
@@ -42,8 +42,8 @@
   --shadow-card: 0 15px 35px rgba(0, 0, 0, 0.4);
   --shadow-gold: 0 10px 30px rgba(197, 157, 63, 0.15);
 
-  /* EX monogram — official double-line geometric mark */
-  --logo-ex: url('images/logo-ex.svg');
+  /* Official EX monogram — user image, transparent background */
+  --logo-ex: url('images/logo-icon.png');
 }
 
 /* Base Resets */
@@ -308,39 +308,104 @@ a[href^="tel:"] span,
 
 .brand-logo {
   display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  background: transparent;
+  background-color: transparent;
+}
+
+/* Navbar: monogram on top, company name below */
+.navbar .brand-logo {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.35rem;
-  text-decoration: none;
-  flex-shrink: 0;
+  gap: 0.28rem;
   text-align: center;
 }
 
-/* Official double-line EX monogram */
-.logo-icon {
+.navbar .brand-text-wrapper {
+  align-items: center;
+  text-align: center;
+}
+
+.navbar .logo-icon {
+  margin: 0 auto;
   width: 3.6rem;
-  height: 2.25rem;
+  height: 2.1rem;
+}
+
+.navbar .brand-name-ar {
+  font-size: 0.82rem;
+}
+
+.navbar .brand-name-en {
+  font-size: 0.52rem;
+  letter-spacing: 0.08em;
+}
+
+/* Official EX monogram image — transparent PNG, no box behind it */
+.logo-icon {
+  width: 3.4rem;
+  height: 2rem;
   border: none;
   border-radius: 0;
   display: block;
   flex-shrink: 0;
   background: transparent var(--logo-ex) center / contain no-repeat;
+  background-color: transparent;
   font-size: 0;
   color: transparent;
   box-shadow: none;
   padding: 0;
   line-height: 0;
-  overflow: hidden;
+  overflow: visible;
+}
+
+.brand-logo-img,
+.footer-logo-img,
+.hero-logo-img {
+  height: 2.8rem;
+  width: auto;
+  object-fit: contain;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  filter: none;
+  display: block;
+  mix-blend-mode: normal;
+}
+
+.brand-logo-img:hover,
+.footer-logo-img:hover {
+  transform: translateY(-2px);
+}
+
+.footer-logo-img {
+  height: 3.2rem;
+}
+
+.hero-logo-img {
+  height: 6.5rem;
+  margin: 0 auto 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.hero-logo-img:hover {
+  transform: scale(1.04);
 }
 
 .brand-text-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.12rem;
-  text-align: center;
+  gap: 0.08rem;
+  align-items: flex-start;
+  background: transparent;
 }
 
 .brand-name-ar {
@@ -357,7 +422,7 @@ a[href^="tel:"] span,
   font-family: var(--font-latin);
   font-size: 0.6rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: #c5a059;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   line-height: 1.2;
@@ -553,20 +618,22 @@ a[href^="tel:"] span,
 .hero-badge-container {
   position: relative;
   margin-bottom: 2rem;
+  background: transparent;
 }
 
 .hero-logo-large {
-  width: 9.5rem;
-  height: 6.15rem;
+  width: 10rem;
+  height: 5.75rem;
   border: none;
   border-radius: 0;
   display: block;
   background: transparent var(--logo-ex) center / contain no-repeat;
+  background-color: transparent;
   font-size: 0;
   color: transparent;
   margin: 0 auto 1.5rem;
   box-shadow: none;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .badge-soon {
