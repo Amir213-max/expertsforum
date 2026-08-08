@@ -146,12 +146,12 @@ select {
 }
 
 .section-tag::before {
-  content: 'ã€Œ ';
-  color: var(--gold-primary);
+  content: '';
+  display: none;
 }
 .section-tag::after {
-  content: ' ã€';
-  color: var(--gold-primary);
+  content: '';
+  display: none;
 }
 
 .section-title {
@@ -572,10 +572,12 @@ a[href^="tel:"] span,
 }
 
 .dropdown-item::before {
-  content: 'â€¢';
-  color: #1a3c34;
-  font-size: 1.3rem;
-  line-height: 1;
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
 }
 
 .dropdown-item:hover {
@@ -771,15 +773,8 @@ a[href^="tel:"] span,
 }
 
 .vision-card::before {
-  content: 'VISION';
-  position: absolute;
-  top: -20px;
-  left: 20px;
-  font-family: var(--font-latin);
-  font-size: 6rem;
-  font-weight: 900;
-  color: rgba(197, 157, 63, 0.04);
-  pointer-events: none;
+  content: none;
+  display: none;
 }
 
 .vision-quote {
@@ -790,23 +785,6 @@ a[href^="tel:"] span,
   font-weight: 600;
   position: relative;
   z-index: 2;
-}
-
-.vision-quote::before {
-  content: 'â€œ';
-  font-size: 4rem;
-  color: var(--gold-primary);
-  line-height: 0;
-  vertical-align: -1.5rem;
-  margin-left: 0.5rem;
-}
-.vision-quote::after {
-  content: 'â€';
-  font-size: 4rem;
-  color: var(--gold-primary);
-  line-height: 0;
-  vertical-align: -1.5rem;
-  margin-right: 0.5rem;
 }
 
 .stats-grid {
@@ -846,7 +824,7 @@ a[href^="tel:"] span,
 }
 
 /* ==========================================================================
-   Strategic Pillars Section (Ù…Ø­Ø§ÙˆØ± Ø§Ù„Ø¹Ù…Ù„ Ø§Ù„Ø¥Ø³ØªØ±Ø§ØªÙŠØ¬ÙŠ)
+   Strategic Pillars Section
    ========================================================================== */
 .pillars-section {
   padding: 6rem 0;
@@ -922,7 +900,7 @@ a[href^="tel:"] span,
 }
 
 /* ==========================================================================
-   Services Grid (Ø§Ù„Ø®Ø¯Ù…Ø§Øª)
+   Services Grid
    ========================================================================== */
 .services-section {
   padding: 6rem 0;
@@ -1130,7 +1108,7 @@ a[href^="tel:"] span,
 }
 
 /* ==========================================================================
-   Featured Projects Gallery (Ù…Ø¹Ø±Ø¶ Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹ Ø§Ù„Ù…Ù…ÙŠØ²Ø©)
+   Featured Projects Gallery
    ========================================================================== */
 .projects-section {
   padding: 6rem 0;
@@ -1368,8 +1346,13 @@ a[href^="tel:"] span,
   }
   
   .dropdown-item::before {
-    color: var(--gold-primary);
-  }
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
 
   .contact-grid {
     grid-template-columns: 1fr;
@@ -1739,5 +1722,79 @@ a[href^="tel:"] span,
 .blog-read-more:hover {
   color: #ffffff;
   transform: translateX(-5px);
+}
+
+/* Video mobile polish */
+@media (max-width: 768px) {
+  .video-section {
+    padding: 3.5rem 0 4rem;
+  }
+  .video-section .section-header {
+    margin-bottom: 1.75rem;
+  }
+  .video-section .section-title {
+    font-size: 1.45rem;
+    line-height: 1.45;
+  }
+  .video-section .section-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 0 0.25rem;
+  }
+  .video-container {
+    border-radius: 12px;
+    width: 100%;
+  }
+  .video-wrapper {
+    padding-top: 56.25%;
+  }
+  .video-overlay {
+    padding: 0.85rem 0.75rem;
+    justify-content: center;
+    gap: 0.65rem;
+  }
+  .play-btn-pulse {
+    width: 62px;
+    height: 62px;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+  .video-title-overlay {
+    margin-top: 0;
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.5;
+    max-width: 95%;
+    padding: 0 0.35rem;
+  }
+  .media-grid {
+    margin-top: 1.75rem;
+    gap: 1.1rem;
+  }
+  .video-modal {
+    padding: 1rem;
+  }
+  .video-modal-content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-section {
+    padding: 2.75rem 0 3.25rem;
+  }
+  .video-overlay {
+    padding: 0.7rem 0.5rem;
+    gap: 0.5rem;
+  }
+  .play-btn-pulse {
+    width: 54px;
+    height: 54px;
+    font-size: 1.2rem;
+  }
+  .video-title-overlay {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
 }
 
